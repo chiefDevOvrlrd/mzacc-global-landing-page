@@ -1,0 +1,89 @@
+.navbar {
+    height: 90px;
+    width: auto;
+    padding: 50px 190px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        .navbar__logo{
+            padding: 5px 8px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: .4rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.312); // ✅ soft shadow
+            max-height: 100%;
+            max-width: 150px;
+            background: rgba(255, 249, 249, 0.09);
+            border-radius: 50px;
+            backdrop-filter: blur(2.6px);
+            -webkit-backdrop-filter: blur(2.6px);
+            border: 1px solid rgba(255, 249, 249, 0.3);
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            p{
+                font-family: "oswald", sans-serif;
+                font-weight: 600;
+                color: white;
+                
+                span{
+                    display: block;
+                    text-align: center;
+                    line-height: 1.3rem;
+                }
+                .bigger__blue{
+                    font-size: 1.5rem;
+                    color: #0969d6;
+                }
+                .smaller__ash{
+                    color: #cccccc;
+                }
+            }
+        }
+        .navbar__sidebar{
+            padding: 15px;
+            display: flex;
+            flex-direction: row-reverse;
+            background: rgba(255, 249, 249, 0.09);
+            border-radius: 100px;
+           box-shadow: 0 5px 20px rgba(0, 0, 0, 0.312); // ✅ soft shadow
+            backdrop-filter: blur(2.6px);
+            -webkit-backdrop-filter: blur(2.6px);
+            border: 1px solid rgba(255, 249, 249, 0.3);
+            .navbar__toggle{
+                .arrow{
+                    fill: #0969d6;
+                    transition: transform 0.3s ease;
+                }
+            }
+            .open{
+                transform: rotate(180deg);
+            }
+            .navbar__links{
+                max-width: 0;
+                opacity: 0;
+                overflow: hidden;
+                transition: all 0.3s ease;
+                ul {list-style: none; display: flex; flex-direction: row; gap: 1.5rem; padding: 0 1.5rem; }
+            }
+            .expanded{
+                max-width: 500px;
+                opacity: 1;
+                // overflow: visible;
+            }
+        }
+    }
+    
+
+}
