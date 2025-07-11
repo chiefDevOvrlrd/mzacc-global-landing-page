@@ -21,7 +21,7 @@ const containerVariants = {
 export const SubCompanies = () => {
     const { setBackground } = useBackground();
     const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, { amount: 0.2 });
+    const isInView = useInView(ref, { amount: 0.1 });
 
     useEffect(() => {
         setBackground(isInView ? "#021526" : "#F2F2F2");
