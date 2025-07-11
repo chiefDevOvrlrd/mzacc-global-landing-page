@@ -10,6 +10,7 @@ import '../styles/layout/_hero.scss'
 
 
 
+
 export const Hero = () => {
     const ref = useRef<HTMLDivElement>(null);
     const {setBackground} = useBackground();
