@@ -111,7 +111,7 @@ export const Faq = () => {
     };
 
     useEffect(() => {
-        setBackground(isInView ? "#000000" : "#ffffff");
+        setBackground(isInView ? "#021526" : "#F2F2F2");
     }, [isInView, setBackground]);
 
     return(

@@ -32,7 +32,7 @@ export const Pricing = () =>{
     const isInView = useInView(ref, { amount: 0.2 });
 
     useEffect(() => {
-        setBackground(isInView ? "#ffffff" : "#000000");
+        setBackground(isInView ? "#F2F2F2" : "#021526");
     }, [isInView, setBackground]);
 
     return(

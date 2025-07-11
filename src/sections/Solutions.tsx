@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useBackground } from "../context/BackgroundContext";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 import { motion, useInView } from 'motion/react';
 import Carousel from '../components/CarouselBody';
 import { IconFile } from '@tabler/icons-react';
@@ -60,9 +61,11 @@ export const Solution = () => {
     const isInView = useInView(ref, { amount: 0.2 });
     const deliverRef = useRef<HTMLDivElement>(null);
     const deliverInView = useInView(deliverRef, { amount: 0.2 });
+    const isTablet = useMediaQuery('(max-width: 884px)');
+    const isMobile = useMediaQuery('(max-width: 480px)');
 
     useEffect(() => {
-        setBackground(isInView ? "#f3f3f3" : "#000000");
+        setBackground(isInView ? "#F2F2F2" : "#021526");
     }, [isInView, setBackground]);
 
     return (
@@ -119,8 +122,8 @@ export const Solution = () => {
                 <motion.div className="grid">
                     <div className="icon__container"> 
                         <IconFile
-                            width={50}
-                            height={50}
+                            width={isMobile ? 28 : isTablet ? 40 : 50}
+                            height={isMobile ? 28 : isTablet ? 40 : 50}
                             stroke={1.3}
                         />
                     </div>
@@ -130,8 +133,8 @@ export const Solution = () => {
                 <motion.div className="grid">
                     <div className="icon__container"> 
                         <IconFlare
-                            width={50}
-                            height={50}
+                            width={isMobile ? 28 : isTablet ? 40 : 50}
+                            height={isMobile ? 28 : isTablet ? 40 : 50}
                             stroke={1.3}
                         />
                     </div>
@@ -141,8 +144,8 @@ export const Solution = () => {
                 <motion.div className="grid">
                     <div className="icon__container"> 
                         <IconMessageCircle
-                            width={50}
-                            height={50}
+                            width={isMobile ? 28 : isTablet ? 40 : 50}
+                            height={isMobile ? 28 : isTablet ? 40 : 50}
                             stroke={1.3}
                         />
                     </div>
@@ -152,8 +155,8 @@ export const Solution = () => {
                 <motion.div className="grid">
                     <div className="icon__container"> 
                         <IconFlare
-                            width={50}
-                            height={50}
+                            width={isMobile ? 28 : isTablet ? 40 : 50}
+                            height={isMobile ? 28 : isTablet ? 40 : 50}
                             stroke={1.3}
                         />
                     </div>
@@ -163,8 +166,8 @@ export const Solution = () => {
                 <motion.div className="grid">
                     <div className="icon__container"> 
                         <IconFlare
-                            width={50}
-                            height={50}
+                            width={isMobile ? 28 : isTablet ? 40 : 50}
+                            height={isMobile ? 28 : isTablet ? 40 : 50}
                             stroke={1.3}
                         />
                     </div>
@@ -174,8 +177,8 @@ export const Solution = () => {
                 <motion.div className="grid">
                     <div className="icon__container"> 
                         <IconFlare
-                            width={50}
-                            height={50}
+                            width={isMobile ? 28 : isTablet ? 40 : 50}
+                            height={isMobile ? 28 : isTablet ? 40 : 50}
                             stroke={1.3}
                         />
                     </div>

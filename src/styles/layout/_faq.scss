@@ -1,3 +1,5 @@
+@use "../abstracts/variable";
+
 .faq{
     padding: 120px 100px;
     color: white;
@@ -37,5 +39,27 @@
             }
         }
         
+    }
+}
+
+@media (max-width: variable.$breakpoint-tablet) {
+    .faq{
+        padding: 60px 10px;
+        &__container{
+            .faq__header{
+                font-size: 2.5rem;
+            }
+            .faq__list{
+                padding: 20px;
+            }
+            .faq__item{
+                .faq__question{
+                    font-size: 1.3rem;
+                }
+                .faq__answer{
+                    font-size: 1rem;
+                }
+            }
+        }
     }
 }

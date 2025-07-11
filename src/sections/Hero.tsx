@@ -1,18 +1,28 @@
 import { useEffect, useRef, useState } from "react";
 import { useBackground } from "../context/BackgroundContext";
 import { motion, useInView} from 'motion/react'
-import { WhiteButton, GreenButton } from "../components/ui/Buttons";
+import { GreenButton } from "../components/ui/Buttons";
+import { useMediaQuery } from "../hooks/useMediaQuery";
+import img1 from '../assets/img1.png'
+import img2 from '../assets/img2.png'
+import img3 from '../assets/img3.png'
 import '../styles/layout/_hero.scss'
+
+
 
 export const Hero = () => {
     const ref = useRef<HTMLDivElement>(null);
     const {setBackground} = useBackground();
     const [bgReady, setBgReady] = useState(false);
-    const isInView = useInView(ref, {amount: 0.5})
+    const isInView = useInView(ref, {amount: 0.3});
+    const isMobile = useMediaQuery('(max-width: 480px)');
+    const isTablet = useMediaQuery('(max-width: 884px)');
+    const img1X = isMobile ? -10 : isTablet ? -20 : -50;
+    const img3X = isMobile ? 10 : isTablet ? 20 : 50;
 
     useEffect(() =>{
         if (isInView) {
-            setBackground("#000000")
+            setBackground("#021526")
         }
     }, [isInView, setBackground]);
 
@@ -33,28 +43,32 @@ export const Hero = () => {
                     <>
                         <div className="hero__text">
                             <h1 className="intro__text">
+
                                 <motion.span
                                     initial={{ opacity:0, y:20}}
                                     animate={{ opacity:1, y:0 }}
                                     transition={{ duration: 0.5, delay:0.4 }}
-                                >Innovate.</motion.span>
-                                <motion.span
-                                    initial={{ opacity:0, y:20}}
-                                    animate={{ opacity:1, y:0 }}
-                                    transition={{ duration: 0.5, delay:0.7 }}
-                                >Connect.</motion.span>
+                                    className="intro__text-first"
+                                >Mzacc Global</motion.span>
                                 <motion.span
                                     initial={{ opacity: 0, x: -50 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.6, delay: 1.1 }}
-                                >Transform Africa.</motion.span>
+                                >Driving Innovation Forward –</motion.span>
+                                <motion.span
+                                    initial={{ opacity: 0, x: -50 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.6, delay: 1.3 }}
+                                >From Africa to the World.
+                                </motion.span>
                             </h1>
                             <motion.p
                                 initial={{opacity: 0}}
                                 animate={{opacity: 1}}
                                 transition={{duration: 0.5, delay: 1.5}}
                             >
-                                Driving digital solutions for Africa’s industries—AI, software, design, and more. We empower businesses, bridge networks, and deliver scalable impact across the continent and beyond.
+                                Mzacc Global is a multidimensional tech & innovation conglomerate building scalable systems to solve real-world problems through software, AI, design, smart infrastructure, fintech, education, oil tech, and more.
+
                             </motion.p>
                         </div>
                         <motion.div 
@@ -63,8 +77,7 @@ export const Hero = () => {
                             transition={{duration: 0.5, delay: 1.7}}
                             className="hero__buttons"
                         >
-                            <GreenButton text="Explore"/>
-                            <WhiteButton text="Solution"/>
+                            <GreenButton text="Contact Us"/>
                         </motion.div>
                         <div className="hero__imgs">
                             <div className="img__container">
@@ -73,12 +86,14 @@ export const Hero = () => {
                                     initial={{
                                         opacity: 0,
                                     }}
-                                    animate={{
+                                    animate={
+                                        isInView ? {
                                         opacity: 1,
-                                        x: -50,
+                                        x: img1X,
                                         scale: 1,
-                                    }}
-                                    transition={{ duration: 0.6, delay: 1.8 }}
+                                    }: {
+                                        opacity: 0,}}
+                                    transition={{ duration: 0.6, delay: 0.9 }}
                                     whileHover={{
                                         scale: 0.9,
                                         transition: { duration: 0.2 },
@@ -86,35 +101,35 @@ export const Hero = () => {
 
                                     className="img1 img"
                                 >
-                                    <p>img</p>
+                                    <img src={img1} alt="Image 1" />
                                 </motion.div>
                                 <motion.div 
                                     initial={{scale:0.9, opacity:0}}
-                                    animate={{scale:1, opacity:1}}
-                                    transition={{duration:0.5, delay:2.1 }}
+                                    animate={isInView ? {scale:1, opacity:1} : {scale:0.9, opacity:0}}
+                                    transition={{duration:0.5, delay:1.5 }}
                                     whileHover={{
                                         scale: 0.9,
                                         transition: { duration: 0.2 },
                                     }}
                                     className="img2 img"
                                 >
-                                    <p>img</p>
+                                    <img src={img2} alt="mzacc-global" />
                                 </motion.div>
                                 <motion.div
                                     initial={{
                                         opacity: 0,
                                     }}
-                                    animate={{
+                                    animate={isInView ? {
                                         opacity: 1,
-                                        x: 50,
-                                    }}
-                                    transition={{ duration: 0.6, delay: 1.8 }}
+                                        x: img3X,
+                                    } : {opacity: 0,}}
+                                    transition={{ duration: 0.6, delay: 0.9 }}
                                     whileHover={{
                                         scale: 0.9,
                                         transition: { duration: 0.2 , ease: "easeInOut" },
                                     }}
                                     className="img3 img">
-                                    <p>img</p>
+                                    <img src={img3} alt="mzacc-global" />
                                 </motion.div>
                             </div>
                         </div>

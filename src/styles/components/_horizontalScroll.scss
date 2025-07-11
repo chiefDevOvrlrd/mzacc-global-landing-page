@@ -1,3 +1,5 @@
+@use '../abstracts/variable';
+
 html {
     overflow-y: scroll;
     height: 100%;
@@ -72,11 +74,41 @@ body {
     .img__container{
         background: rgba(255, 249, 249, 0.09);
         border-radius: 10px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.312); // ✅ soft shadow
+        box-shadow: 0 5px 20px rgba(29, 29, 29, 0.312); // ✅ soft shadow
         backdrop-filter: blur(2.6px);
         -webkit-backdrop-filter: blur(2.6px);
         background: rgba(255, 249, 249, 0.283);
         height: 100%;
         width: 100%;
+    }
+}
+
+@media (max-width: variable.$breakpoint-tablet) {
+    .container {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }    
+    .firstContainer {
+        padding: 80px 20px;
+        grid-template-columns: repeat(2, minmax(380px, 1fr));
+        height: auto;
+        .img__container {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .lastContainer {
+        padding: 20px;
+        grid-template-columns: repeat(2, minmax(380px, 1fr));
+        height: 600px;
+    }
+    .panel {
+        padding: 20px;
+        grid-template-columns: repeat(2, minmax(380px, 1fr));
+        height: 600px;
+        gap: 1.5rem;
+        justify-content: center;
     }
 }

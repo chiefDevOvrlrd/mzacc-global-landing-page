@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useLayoutEffect, useRef } from 'react';
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 import "../../styles/components/_horizontalScroll.scss"
 
 gsap.registerPlugin(ScrollTrigger);
@@ -9,7 +10,11 @@ export default function HorizontalScroll() {
     const containerRef = useRef<HTMLDivElement | null>(null);
     const slider = useRef<HTMLDivElement | null>(null);
 
+    //only run on computer screens
+    const isTablet = useMediaQuery('(max-width: 884px)');
+
     useLayoutEffect(()=>{
+        if (isTablet) return; // Exit if not on tablet or larger screens
         let ctx = gsap.context(() =>{
             let panels = gsap.utils.toArray(".panel");
             gsap.to(panels,{
@@ -25,7 +30,7 @@ export default function HorizontalScroll() {
                 });
         }, containerRef);
         return () =>ctx.revert();
-    }, []);
+    }, [isTablet]);
 
     return(
         <div className='scroll__container' ref={containerRef}>
