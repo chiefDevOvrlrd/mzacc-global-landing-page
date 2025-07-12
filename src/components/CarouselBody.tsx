@@ -5,24 +5,12 @@ import Carousel from "./ui/Carousel";
 export default function CarouselDemo() {
   const slideData = [
     {
-      title: "Mystic Mountains",
-      button: "Explore Component",
-      src: "https://images.unsplash.com/photo-1494806812796-244fe51b774d?q=80&w=3534&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      title: "🔭 OUR VISION",
+      note: "To become Africa’s most impactful tech ecosystem, building solutions that transcend borders, empower people, and scale globally — one innovation at a time.",
     },
     {
-      title: "Urban Dreams",
-      button: "Explore Component",
-      src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      title: "Neon Nights",
-      button: "Explore Component",
-      src: "https://images.unsplash.com/photo-1590041794748-2d8eb73a571c?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      title: "Desert Whispers",
-      button: "Explore Component",
-      src: "https://images.unsplash.com/photo-1679420437432-80cfbf88986c?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      title: "🚀 OUR MISSION",
+      note: "To solve global and local problems through intelligent systems, digital infrastructure, ethical leadership, and collaborative platforms — with sustainability, inclusivity, and excellence at our core.",
     },
   ]
 
@@ -32,3 +20,8 @@ export default function CarouselDemo() {
     </div>
   )
 }
+
+//
+// 
+// 
+//

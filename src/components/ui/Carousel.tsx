@@ -6,8 +6,7 @@ import "../../styles/components/_carousel.scss"
 
 interface SlideData {
     title: string
-    button: string
-    src: string
+    note: string
 }
 
 interface SlideProps {
@@ -60,11 +59,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         yRef.current = 0
     }
 
-    const imageLoaded = (event: React.SyntheticEvent<HTMLImageElement>) => {
-        event.currentTarget.style.opacity = "1"
-    }
-
-    const { src, button, title } = slide
+    const { title, note } = slide
     const isActive = current === index
 
     return (
@@ -74,31 +69,31 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
                 onClick={() => handleSlideClick(index)}
             >
                 <div className="slide__wrapper">
-                <div
-                    ref={imageRef}
-                    className="slide__image-section"
-                    onMouseMove={handleMouseMove}
-                    onMouseLeave={handleMouseLeave}
-                    style={{
-                    transform: isActive ? "translate3d(calc(var(--x) / 30), calc(var(--y) / 30), 0)" : "none",
-                    }}
-                >
-                    <img
+                  <div
+                      ref={imageRef}
+                      className="slide__image-section"
+                      onMouseMove={handleMouseMove}
+                      onMouseLeave={handleMouseLeave}
+                      style={{
+                      transform: isActive ? "translate3d(calc(var(--x) / 30), calc(var(--y) / 30), 0)" : "none",
+                      }}
+                  >
+                    <div
                     className={`slide__image ${isActive ? "slide__image--active" : "slide__image--inactive"}`}
-                    alt={title}
-                    src={src || "/placeholder.svg"}
-                    onLoad={imageLoaded}
-                    loading="eager"
-                    decoding="sync"
-                    />
+                    >
+                      <div className="statement">
+                        <h2 className="slide__title">{title}</h2>
+                        <p className="slide__note">{note}</p>
+                      </div>
+                    </div>
                 </div>
 
-                <div className="slide__content-section">
+                {/* <div className="slide__content-section">
                     <article className={`slide__content ${isActive ? "slide__content--active" : "slide__content--inactive"}`}>
                     <h2 className="slide__title">{title}</h2>
                     <button className="slide__button">{button}</button>
                     </article>
-                </div>
+                </div> */}
                 </div>
             </li>
         </div>

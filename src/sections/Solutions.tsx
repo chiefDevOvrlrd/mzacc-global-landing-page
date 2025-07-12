@@ -1,12 +1,12 @@
 import { useEffect, useRef } from "react";
 import { useBackground } from "../context/BackgroundContext";
-import { useMediaQuery } from "../hooks/useMediaQuery";
+// import { useMediaQuery } from "../hooks/useMediaQuery";
 import { motion, useInView } from 'motion/react';
 import Carousel from '../components/CarouselBody';
-import { IconFile } from '@tabler/icons-react';
-import { IconFlare } from '@tabler/icons-react';
-import { IconMessageCircle } from '@tabler/icons-react';
-import { GreenButton } from "../components/ui/Buttons";
+// import { IconFile } from '@tabler/icons-react';
+// import { IconFlare } from '@tabler/icons-react';
+// import { IconMessageCircle } from '@tabler/icons-react';
+// import { GreenButton } from "../components/ui/Buttons";
 import '../styles/layout/_solution.scss';
 
 const containerVariants = {
@@ -45,10 +45,6 @@ const textVariants = {
     hidden: { opacity: 0, y: 40 },
 };
 
-const paragraphVariants = {
-    visible: { opacity: 1, transition: { duration: 0.5, delay: 1.5 } },
-    hidden: { opacity: 0 },
-};
 
 const carouselVariants = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 1.8 } },
@@ -59,10 +55,10 @@ export const Solution = () => {
     const { setBackground } = useBackground();
     const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref, { amount: 0.2 });
-    const deliverRef = useRef<HTMLDivElement>(null);
-    const deliverInView = useInView(deliverRef, { amount: 0.2 });
-    const isTablet = useMediaQuery('(max-width: 884px)');
-    const isMobile = useMediaQuery('(max-width: 480px)');
+    // const deliverRef = useRef<HTMLDivElement>(null);
+    // const deliverInView = useInView(deliverRef, { amount: 0.2 });
+    // const isTablet = useMediaQuery('(max-width: 884px)');
+    // const isMobile = useMediaQuery('(max-width: 480px)');
 
     useEffect(() => {
         setBackground(isInView ? "#F2F2F2" : "#021526");
@@ -80,20 +76,15 @@ export const Solution = () => {
             <motion.h1 
                 variants={headingVariants}
             >
-                EXPLORE OUR CORE CAPABILITIES
+                OUR PURPOSE
             </motion.h1>
             <h3>
                 <motion.span variants={textVariants} custom={0}>
-                    Real solutions.
+                    So ,
                 </motion.span> <motion.span variants={textVariants} custom={1}>
-                    Global impact.
+                    What drives us?
                 </motion.span>
             </h3>
-            <motion.p variants={paragraphVariants}>
-                Discover how our platforms connect real-world needs with digital
-                innovation. We deliver scalable tools for businesses, talent, and
-                economies across Africa and beyond.
-            </motion.p>
         </div>
 
         <motion.div variants={carouselVariants}>
@@ -101,7 +92,7 @@ export const Solution = () => {
         </motion.div>
 
         {/* do a grid animation later, or not...  */}
-        <div className="solution__gridtext" ref={deliverRef}>
+        {/* <div className="solution__gridtext" ref={deliverRef}>
             <motion.h1
                 initial="hidden"
                 animate={deliverInView ? "visible" : "hidden"}
@@ -186,10 +177,8 @@ export const Solution = () => {
                     <p>Bespoke platforms and apps built to address business needs and drive measurable results.</p>
                 </motion.div>
             </div>
-        </div>
-        <div className="solution__button">
-            <GreenButton text="Discover More"/>
-        </div>
+        </div> */}
+        {/* i guess not..... */}
     </motion.section>
     );
 };
