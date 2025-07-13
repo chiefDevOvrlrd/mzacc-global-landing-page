@@ -39,9 +39,9 @@ export const NavBar = () => {
                                     scale: 0.9,
                                 }}
                             ><a href="#home">Home</a></motion.li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#ourpurpose">Our Purpose</a></li>
+                            <li><a href="#ecosystem">Ecosystem/Partners</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
                         </ul>
                     </nav>
                 </div>

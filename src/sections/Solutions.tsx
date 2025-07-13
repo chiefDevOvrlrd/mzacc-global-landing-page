@@ -1,12 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useBackground } from "../context/BackgroundContext";
-// import { useMediaQuery } from "../hooks/useMediaQuery";
 import { motion, useInView } from 'motion/react';
 import Carousel from '../components/CarouselBody';
-// import { IconFile } from '@tabler/icons-react';
-// import { IconFlare } from '@tabler/icons-react';
-// import { IconMessageCircle } from '@tabler/icons-react';
-// import { GreenButton } from "../components/ui/Buttons";
 import '../styles/layout/_solution.scss';
 
 const containerVariants = {
@@ -55,10 +50,6 @@ export const Solution = () => {
     const { setBackground } = useBackground();
     const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref, { amount: 0.2 });
-    // const deliverRef = useRef<HTMLDivElement>(null);
-    // const deliverInView = useInView(deliverRef, { amount: 0.2 });
-    // const isTablet = useMediaQuery('(max-width: 884px)');
-    // const isMobile = useMediaQuery('(max-width: 480px)');
 
     useEffect(() => {
         setBackground(isInView ? "#F2F2F2" : "#021526");
@@ -66,6 +57,7 @@ export const Solution = () => {
 
     return (
     <motion.section
+        id="ourpurpose"
         ref={ref}
         variants={containerVariants}
         initial="hidden"
@@ -92,92 +84,7 @@ export const Solution = () => {
         </motion.div>
 
         {/* do a grid animation later, or not...  */}
-        {/* <div className="solution__gridtext" ref={deliverRef}>
-            <motion.h1
-                initial="hidden"
-                animate={deliverInView ? "visible" : "hidden"}
-                variants={headingVariants} 
-                custom={0}
-                className="solution__gridtext__header"
-            >WHAT WE DELIVER</motion.h1>
-            <motion.h3 
-                initial="hidden"
-                animate={deliverInView ? "visible" : "hidden"} 
-                variants={textVariants}
-                custom={1}
-                className="solution__gridtext__text"
-            >
-                Solutions for real-world impact.
-            </motion.h3>
-            <div className="solution__grid">
-                <motion.div className="grid">
-                    <div className="icon__container"> 
-                        <IconFile
-                            width={isMobile ? 28 : isTablet ? 40 : 50}
-                            height={isMobile ? 28 : isTablet ? 40 : 50}
-                            stroke={1.3}
-                        />
-                    </div>
-                    <h1>Custom Software</h1>
-                    <p>Bespoke platforms and apps built to address business needs and drive measurable results.</p>
-                </motion.div>
-                <motion.div className="grid">
-                    <div className="icon__container"> 
-                        <IconFlare
-                            width={isMobile ? 28 : isTablet ? 40 : 50}
-                            height={isMobile ? 28 : isTablet ? 40 : 50}
-                            stroke={1.3}
-                        />
-                    </div>
-                    <h1>Custom Software</h1>
-                    <p>Bespoke platforms and apps built to address business needs and drive measurable results.</p>
-                </motion.div>
-                <motion.div className="grid">
-                    <div className="icon__container"> 
-                        <IconMessageCircle
-                            width={isMobile ? 28 : isTablet ? 40 : 50}
-                            height={isMobile ? 28 : isTablet ? 40 : 50}
-                            stroke={1.3}
-                        />
-                    </div>
-                    <h1>Custom Software</h1>
-                    <p>Bespoke platforms and apps built to address business needs and drive measurable results.</p>
-                </motion.div>
-                <motion.div className="grid">
-                    <div className="icon__container"> 
-                        <IconFlare
-                            width={isMobile ? 28 : isTablet ? 40 : 50}
-                            height={isMobile ? 28 : isTablet ? 40 : 50}
-                            stroke={1.3}
-                        />
-                    </div>
-                    <h1>Custom Software</h1>
-                    <p>Bespoke platforms and apps built to address business needs and drive measurable results.</p>
-                </motion.div>
-                <motion.div className="grid">
-                    <div className="icon__container"> 
-                        <IconFlare
-                            width={isMobile ? 28 : isTablet ? 40 : 50}
-                            height={isMobile ? 28 : isTablet ? 40 : 50}
-                            stroke={1.3}
-                        />
-                    </div>
-                    <h1>Custom Software</h1>
-                    <p>Bespoke platforms and apps built to address business needs and drive measurable results.</p>
-                </motion.div>
-                <motion.div className="grid">
-                    <div className="icon__container"> 
-                        <IconFlare
-                            width={isMobile ? 28 : isTablet ? 40 : 50}
-                            height={isMobile ? 28 : isTablet ? 40 : 50}
-                            stroke={1.3}
-                        />
-                    </div>
-                    <h1>Custom Software</h1>
-                    <p>Bespoke platforms and apps built to address business needs and drive measurable results.</p>
-                </motion.div>
-            </div>
-        </div> */}
+        
         {/* i guess not..... */}
     </motion.section>
     );

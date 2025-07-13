@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    width: 300vw;
+    width: 200vw;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
@@ -24,7 +24,7 @@ body {
 
 .firstContainer {
     font-family: "inter", sans-serif;
-    padding: 140px 100px;
+    padding: 140px 100px 50px;
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(2, minmax(380px, 1fr));
@@ -36,10 +36,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 350px;
-            // max-width:1000px;
-            overflow: hidden;
-            
+            height: 250px;
             &-img{
                 object-fit: cover;
                 transition: transform 0.3s ease-in-out; 
@@ -71,13 +68,31 @@ body {
 }
 
 .lastContainer {
-    height: 100vh;
     padding: 40px 100px;
-    .partnership-grid{
-        display: grid;
-        grid-template-columns: repeat(2, minmax(380px, 1fr));
-        gap: 2.5rem;
-        
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    h3{
+        font-family: "inter", sans-serif;
+        font-size: 3rem;
+        font-weight: 500;
+        color: #f2f2f2f2;
+        text-align: center;
+        span{
+            display: inline-block;
+        }
+    }
+    p{
+        font-family: 'inter', sans-serif;
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: #f2f2f2f2;
+        padding: 20px 120px;
+        text-align: center;
+        span{
+            display: inline-block;
+            padding-right: 10px;
+        }
     }
 }
 
@@ -92,17 +107,16 @@ body {
 
 .sub-company{
     display: grid;
-    padding: 10px;
-    gap: 1.5rem;
+    gap: 1rem;
     grid-template-columns: 50% 50%;
+    align-items: center;
     .img__container{
         border-radius: 10px;
-        height: 320px;
+        height: 250px;
         max-width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
         img{
             border-radius: 12px;
             // width: 100%;

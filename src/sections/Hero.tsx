@@ -35,6 +35,7 @@ export const Hero = () => {
     return (
         <>
             <motion.section
+                id="home"
                 ref={ref}
                 animate={{ opacity: isInView ? 1 : 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}

@@ -2,6 +2,10 @@ import { useEffect, useRef } from "react";
 import { useBackground } from "../context/BackgroundContext";
 import { motion, useInView } from 'motion/react';
 import HorizontalScroll from "../components/ui/HorizontalScroll"
+import deriv from '../assets/deriv.png';
+import gonomad from '../assets/gonomad.png';
+import exness from '../assets/exness.png';
+import inveslo from '../assets/inveslo.png';    
 import "../styles/layout/_sub-companies.scss"
 
 const containerVariants = {
@@ -38,6 +42,8 @@ export const SubCompanies = () => {
     const { setBackground } = useBackground();
     const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref, { amount: 0.1 });
+    const partnerRef = useRef<HTMLDivElement>(null);
+    const partnerInView = useInView(partnerRef, { amount: 0.4 });
 
     useEffect(() => {
         setBackground(isInView ? "#021526" : "#F2F2F2");
@@ -46,6 +52,7 @@ export const SubCompanies = () => {
     
     return(
         <motion.section
+            id="ecosystem"
             className="sub-companies"ref={ref}
             variants={containerVariants}
             initial="hidden"
@@ -82,6 +89,46 @@ export const SubCompanies = () => {
                 </motion.p>
             </div>
             <HorizontalScroll/>
+            <div className="partnership-grid__container"
+                ref={partnerRef}
+            >
+                <motion.h1
+                    initial="hidden"
+                    animate={partnerInView ? "visible" : "hidden"}
+                    variants={headingVariants} 
+                    custom={0}
+                    className="partnership-grid__container__heading"
+                >OUR PARTNERS</motion.h1>
+
+                <motion.div 
+                    className="partnership-grid"
+                    initial="hidden"
+                    animate={partnerInView ? "visible" : "hidden"}
+                    variants={headingVariants} 
+                    custom={1}
+                >
+                    <div className="partner">
+                        <div className="img__container">
+                            <img src={deriv} alt="Deriv" />
+                        </div>
+                    </div>
+                    <div className="partner">
+                        <div className="img__container">
+                            <img src={gonomad} alt="Formora" />
+                        </div>
+                    </div>
+                    <div className="partner">
+                        <div className="img__container">
+                            <img src={exness} alt="Formora" />
+                        </div>
+                    </div>
+                    <div className="partner">
+                        <div className="img__container">
+                            <img src={inveslo} alt="Formora" />
+                        </div>
+                    </div>
+                </motion.div>
+            </div>
         </motion.section>
     )
 }

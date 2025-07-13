@@ -37,6 +37,7 @@ export const Pricing = () =>{
 
     return(
         <motion.section
+            id="pricing"
             className="pricing"
             ref={ref}
             variants={containerVariants}

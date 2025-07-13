@@ -54,12 +54,13 @@
             }
         }
         .navbar__sidebar{
+            max-height: 55px;
             padding: 15px;
             display: flex;
             flex-direction: row-reverse;
             background: rgba(255, 249, 249, 0.09);
             border-radius: 100px;
-           box-shadow: 0 5px 20px rgba(0, 0, 0, 0.312); // ✅ soft shadow
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.312); // ✅ soft shadow
             backdrop-filter: blur(2.6px);
             -webkit-backdrop-filter: blur(2.6px);
             border: 1px solid rgba(255, 249, 249, 0.3);
@@ -77,10 +78,17 @@
                 opacity: 0;
                 overflow: hidden;
                 transition: all 0.3s ease;
-                ul {list-style: none; display: flex; flex-direction: row; gap: 1.5rem; padding: 0 1.5rem; }
+                ul {
+                    list-style: none;
+                    display: flex; 
+                    flex-direction: row; 
+                    gap: 1.5rem; 
+                    padding: 0 1.5rem; 
+                    flex-wrap: nowrap;
+                }
             }
             .expanded{
-                max-width: 500px;
+                max-width: 600px;
                 opacity: 1;
                 // overflow: visible;
             }
