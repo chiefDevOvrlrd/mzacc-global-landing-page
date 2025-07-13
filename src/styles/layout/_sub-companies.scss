@@ -1,4 +1,28 @@
 .sub-companies{
     overflow-x: hidden;
     position: relative;
+    padding: 250px 0px 0px;
+    &__content{
+        font-family: "inter", sans-serif;
+        text-align: center;
+        color: #f2f2f2;
+        &-heading{
+            font-weight: 300;
+            font-size: 1rem;
+        }
+        &-text{
+            padding: 10px 0;
+            font-size: 3rem;
+            font-weight: 300;
+            span{
+                display: inline-block;
+                padding-right: 10px;
+            }
+        }
+        p{
+            padding: 0 120px;
+            font-size: 1.5rem;
+            font-weight: 200;
+        }
+    }
 }
