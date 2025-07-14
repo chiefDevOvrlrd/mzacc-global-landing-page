@@ -5,7 +5,8 @@ import HorizontalScroll from "../components/ui/HorizontalScroll"
 import deriv from '../assets/deriv.png';
 import gonomad from '../assets/gonomad.png';
 import exness from '../assets/exness.png';
-import inveslo from '../assets/inveslo.png';    
+import inveslo from '../assets/inveslo.png';  
+import oneroyal from '../assets/oneroyal.png'; 
 import "../styles/layout/_sub-companies.scss"
 
 const containerVariants = {
@@ -125,6 +126,11 @@ export const SubCompanies = () => {
                     <div className="partner">
                         <div className="img__container">
                             <img src={inveslo} alt="Formora" />
+                        </div>
+                    </div>
+                    <div className="partner">
+                        <div className="img__container">
+                            <img src={oneroyal} alt="Formora" />
                         </div>
                     </div>
                 </motion.div>

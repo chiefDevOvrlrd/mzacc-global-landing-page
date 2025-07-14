@@ -41,9 +41,7 @@
         }
         .partnership-grid{
             padding: 100px 0;
-            display: grid;
-            grid-template-columns: repeat(4, minmax(300px, 1fr));
-            width: fit-content;
+            display: flex;
             gap: 2.5rem;
             margin: auto;
             .partner{

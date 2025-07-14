@@ -69,7 +69,8 @@ body {
 
 .lastContainer {
     padding: 40px 100px;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     display: grid;
     align-items: center;
     h3{

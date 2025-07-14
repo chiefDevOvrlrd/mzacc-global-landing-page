@@ -1,13 +1,16 @@
 import gsap from 'gsap';
 import { motion, useInView } from 'motion/react';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef, useEffect } from 'react';
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 import mavision from '../../assets/Mavizion.png';
 import Zentrovia from '../../assets/Zentrovia.png';
 import Formora from '../../assets/Formora.png';
 import Linkspire from '../../assets/Linkspire.png';
 import Biznova from '../../assets/Biznova.png';
+import Ainova from '../../assets/Ainova.png';
+import Greenova from '../../assets/Greenova.png';
+import Finova from '../../assets/Finova.png';
 import "../../styles/components/_horizontalScroll.scss";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -40,6 +43,15 @@ export default function HorizontalScroll() {
         return () =>ctx.revert();
     }, [isTablet]);
 
+    useEffect(() => {
+        const handleLoad = () => {
+            ScrollTrigger.refresh();
+        };
+        const imgs = document.querySelectorAll('.img__container-img');
+        imgs.forEach(img => img.addEventListener('load', handleLoad));
+        return () => imgs.forEach(img => img.removeEventListener('load', handleLoad));
+    }, []);
+    ``
     return(
         <div className='scroll__container' ref={containerRef}>
             <div 
@@ -107,29 +119,33 @@ export default function HorizontalScroll() {
                 <div className="panel">
                     <div className="sub-company">                        
                         <div className="img__container">
-                            <img src={Formora} alt="Formora" />
+                            <img src={Ainova} alt="Ainova" />
                         </div>
                         <div className="sub-company__text">
-                            <h1 className="text">Formora <span className='text__span'> — Where Design Meets Experience</span></h1>
-                            <p>Formora creates magnetic experiences through world-class UI/UX, branding, animation, and digital storytelling. We design visuals that convert and captivate.</p>
+                            <h1 className="text">Ainova <span className='text__span'> — Artificial Intelligence for Global Impact</span></h1>
+                            <p>
+                                Ainova develops advanced AI agents, automation systems, and large-scale AI infrastructure — powering solutions in education, finance, health, and real estate tech.
+                                It fuels smart cities, predictive housing systems, and eco-efficient buildings — including the AI core powering Greenova’s sustainable real estate projects.
+                            </p>
                         </div>
                     </div>
                     <div className="sub-company">                        
                         <div className="img__container">
-                            <img src={Formora} alt="Formora" />
+                            <img src={Greenova} alt="Greenova" />
                         </div>
                         <div className="sub-company__text">
-                            <h1 className="text">Formora <span className='text__span'> — Where Design Meets Experience</span></h1>
-                            <p>Formora creates magnetic experiences through world-class UI/UX, branding, animation, and digital storytelling. We design visuals that convert and captivate.</p>
+                            <h1 className="text">Greenova <span className='text__span'> — Smart Real Estate & Sustainable Innovation</span></h1>
+                            <p>Greenova is our green infrastructure powerhouse — designing eco-smart buildings, solar-powered homes, sustainable urban systems, and climate-resilient architecture.
+                                Fueled by AI from Ainova, it transforms real estate into future-forward, data-driven, energy-efficient assets.</p>
                         </div>
                     </div>
                     <div className="sub-company">                        
                         <div className="img__container">
-                            <img src={Formora} alt="Formora" />
+                            <img src={Finova} alt="Finova" />
                         </div>
                         <div className="sub-company__text">
-                            <h1 className="text">Formora <span className='text__span'> — Where Design Meets Experience</span></h1>
-                            <p>Formora creates magnetic experiences through world-class UI/UX, branding, animation, and digital storytelling. We design visuals that convert and captivate.</p>
+                            <h1 className="text">Finova <span className='text__span'> — FinTech for Digital Tycoons</span></h1>
+                            <p>Finovia builds smart financial systems for entrepreneurs — from AI trading bots and payment tools to investor dashboards. Finance, reimagined with intelligence.</p>
                         </div>
                     </div>
                     <div className="sub-company">                        
