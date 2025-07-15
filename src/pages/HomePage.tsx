@@ -4,6 +4,7 @@ import { Solution } from "../sections/Solutions";
 import { SubCompanies } from "../sections/SubCompanies";
 import { Pricing } from "../sections/Pricing";
 import { Faq } from "../sections/Faq";
+import Footer from "../sections/Footer";
 
 export const HomePage = () => {
     return (
@@ -14,6 +15,7 @@ export const HomePage = () => {
             <SubCompanies/>
             <Pricing/>
             <Faq/>
+            <Footer/>
         </>
     );
 };

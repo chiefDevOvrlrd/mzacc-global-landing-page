@@ -179,13 +179,15 @@
     &:hover::after {
         bottom: -70%;
         background-image:
-        radial-gradient(circle, $green-button-bg 20%, transparent 20%),
-        radial-gradient(circle, white 20%, transparent 20%),
-        radial-gradient(circle, transparent 10%, $green-button-bg 15%, transparent 20%),
-        radial-gradient(circle, white 20%, transparent 20%),
-        radial-gradient(circle, $green-button-bg 20%, transparent 20%),
-        radial-gradient(circle, white 20%, transparent 20%),
-        radial-gradient(circle, $green-button-bg 20%, transparent 20%);
+        radial-gradient(circle, $black-button 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, $black-button 20%, transparent 30%),
+        radial-gradient(circle, $black-button 20%, transparent 20%),
+        radial-gradient(circle, $black-button 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, $black-button 15%, transparent 20%),
+        radial-gradient(circle, $black-button 20%, transparent 20%),
+        radial-gradient(circle, $black-button 20%, transparent 20%),
+        radial-gradient(circle, $black-button 20%, transparent 20%),
+        radial-gradient(circle, $black-button 20%, transparent 20%);
         background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
         background-position: 50% 0%;
         animation: greenbottomBubbles 0.6s ease;

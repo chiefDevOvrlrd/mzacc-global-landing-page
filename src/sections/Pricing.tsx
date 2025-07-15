@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import { useBackground } from "../context/BackgroundContext";
 import { motion, useInView } from 'motion/react';
