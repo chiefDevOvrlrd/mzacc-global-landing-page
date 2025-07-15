@@ -39,9 +39,34 @@ export const NavBar = () => {
                                     scale: 0.9,
                                 }}
                             ><a href="#home">Home</a></motion.li>
-                            <li><a href="#ourpurpose">Our Purpose</a></li>
-                            <li><a href="#ecosystem">Ecosystem/Partners</a></li>
-                            <li><a href="#pricing">Pricing</a></li>
+                            <motion.li
+                                whileHover={{
+                                    scale: 1.2,
+                                }}
+                                whileTap={{
+                                    scale: 0.9,
+                            }}><a href="#ourpurpose">Our Purpose</a></motion.li>
+                            <motion.li
+                                whileHover={{
+                                    scale: 1.2,
+                                }}
+                                whileTap={{
+                                    scale: 0.9,
+                            }}><a href="#ecosystem">Ecosystem/Partners</a></motion.li>
+                            <motion.li
+                                whileHover={{
+                                    scale: 1.2,
+                                }}
+                                whileTap={{
+                                    scale: 0.9,
+                            }}><a href="#pricing">Pricing</a></motion.li>
+                            <motion.li
+                                whileHover={{
+                                    scale: 1.2,
+                                }}
+                                whileTap={{
+                                    scale: 0.9,
+                            }}><a href="#reach-us">Contact Us</a></motion.li>
                         </ul>
                     </nav>
                 </div>

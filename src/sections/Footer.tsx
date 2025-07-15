@@ -89,6 +89,7 @@ const Footer = () => {
     return (
         <>
         <motion.footer
+            id='reach-us'
             className="footer"
             ref={ref}
             variants={containerVariants}

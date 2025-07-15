@@ -78,6 +78,8 @@
                 opacity: 0;
                 overflow: hidden;
                 transition: all 0.3s ease;
+                font-family: 'inter', sans-serif;
+                color: #cccccc;
                 ul {
                     list-style: none;
                     display: flex; 
@@ -88,7 +90,7 @@
                 }
             }
             .expanded{
-                max-width: 600px;
+                max-width: 750px;
                 opacity: 1;
                 // overflow: visible;
             }
