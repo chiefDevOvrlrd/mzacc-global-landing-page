@@ -24,11 +24,13 @@ body {
 
 .firstContainer {
     font-family: "inter", sans-serif;
-    padding: 140px 100px 50px;
+    padding: 0px 100px;
     display: grid;
-    justify-content: center;
+    // justify-content: end;
+    align-items: end;
     grid-template-columns: repeat(2, minmax(380px, 1fr));
     gap: 2.5rem;
+    height: 100vh;
     .sub-company{
         display: grid;
         grid-template-columns: 50% 50%;
@@ -95,6 +97,9 @@ body {
             padding-right: 10px;
         }
     }
+    .sub-companies__content-button{
+        text-align: center;
+    }
 }
 
 .panel {
@@ -140,7 +145,7 @@ body {
             font-size: 1.3rem;
             font-weight: 400;
             font-family: "oswald", sans-serif;
-            &__span{
+            .text__span{
                 font-weight: 200;
             }
         }

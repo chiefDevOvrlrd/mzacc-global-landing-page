@@ -31,14 +31,34 @@
                 text-align: start;
                 font-size: 1.6rem;
                 font-weight: 300;
+                cursor: pointer;
             }
             .faq__answer{
-                padding: 30px 20px;
+                padding: 0 20px;
+                
                 font-size: 1.2rem;
                 font-weight: 200;
+                height: fit-content;
             }
         }
-        
+        .need__more__help{
+            text-align: center;
+            padding: 60px 120px;
+            &__header{
+                font-size: 2.5rem;
+                font-weight: 400;
+                padding-bottom: 20px;
+            }
+            &__text{
+                font-size: 1.2rem;
+                font-weight: 200;
+                padding-bottom: 20px;
+            }
+        }
+    }
+    .mzacc-font{
+        font-weight: 600;
+        font-family: "oswald", sans-serif; // or any color you want
     }
 }
 

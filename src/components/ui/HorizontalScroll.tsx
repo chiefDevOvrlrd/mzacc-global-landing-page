@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 import { motion, useInView } from 'motion/react';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { useLayoutEffect, useRef, useEffect } from 'react';
+import { useEffect, useLayoutEffect, useRef } from 'react';
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 import mavision from '../../assets/Mavizion.png';
 import Zentrovia from '../../assets/Zentrovia.png';
@@ -12,6 +12,7 @@ import Ainova from '../../assets/Ainova.png';
 import Greenova from '../../assets/Greenova.png';
 import Finova from '../../assets/Finova.png';
 import "../../styles/components/_horizontalScroll.scss";
+import { GreenButton } from './Buttons';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,22 +37,27 @@ export default function HorizontalScroll() {
                         pin: true,
                         scrub: 1,
                         snap: 1 / (panels.length - 1),
-                        end: () =>`+=${slider.current!.offsetWidth}`
+                        end: () =>`+=${slider.current ? slider.current.offsetWidth : 0}`
                     }
                 });
         }, containerRef);
         return () =>ctx.revert();
     }, [isTablet]);
 
+    
     useEffect(() => {
         const handleLoad = () => {
             ScrollTrigger.refresh();
         };
         const imgs = document.querySelectorAll('.img__container-img');
         imgs.forEach(img => img.addEventListener('load', handleLoad));
-        return () => imgs.forEach(img => img.removeEventListener('load', handleLoad));
+        // Also refresh after a short delay for layout changes
+        const timeout = setTimeout(() => ScrollTrigger.refresh(), 600);
+        return () => {
+            imgs.forEach(img => img.removeEventListener('load', handleLoad));
+            clearTimeout(timeout);
+        };
     }, []);
-    ``
     return(
         <div className='scroll__container' ref={containerRef}>
             <div 
@@ -184,6 +190,16 @@ export default function HorizontalScroll() {
                         transition={{ duration: 1, delay: 2.2, type: "spring", bounce: 0.4 }}
                     >We're inviting you to co-create a continent-shifting legacy.</motion.span>
                 </motion.p>
+                <motion.div
+                    className="sub-companies__content-button"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={lastInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.5, delay: 1.8 }}
+                >
+                    <GreenButton
+                        text="Join Us"
+                    />
+                </motion.div>
             </div>
         </div>
     )

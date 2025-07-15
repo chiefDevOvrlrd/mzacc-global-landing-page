@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useBackground } from "../context/BackgroundContext";
 import { motion, useInView } from 'motion/react';
-import HorizontalScroll from "../components/ui/HorizontalScroll"
+import HorizontalScroll from "../components/ui/HorizontalScroll";
 import deriv from '../assets/deriv.png';
 import gonomad from '../assets/gonomad.png';
 import exness from '../assets/exness.png';
