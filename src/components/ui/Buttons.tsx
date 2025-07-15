@@ -2,28 +2,35 @@ import "../../styles/components/_button.scss"
 
 interface Button{
     text: string;
+    link: string;
 }
 
-export const WhiteButton = ({text}: Button) => {
+export const WhiteButton = ({text, link}: Button,) => {
     return (
-        <button className="white-button">
-            {text}
-        </button>
+        <a  href={`mailto:${link}`}>
+            <button className="white-button">
+                {text}
+            </button>
+        </a>
     )
 }
 
-export const GreenButton = ({text}: Button) => {
+export const GreenButton = ({text, link}: Button) => {
     return (
-        <button className="green-button">
-            {text}
-        </button>
+        <a  href={`mailto:${link}`}>
+            <button className="green-button">
+                {text}
+            </button>
+        </a>
     )
 }
-export const BlackButton = ({text}: Button) => {
+export const BlackButton = ({text, link}: Button) => {
     return (
-        <button className="black-button">
-            {text}
-        </button>
+        <a  href={`mailto:${link}`}>
+            <button className="black-button">
+                {text}
+            </button>
+        </a>
     )
 }
 

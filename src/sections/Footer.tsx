@@ -114,6 +114,7 @@ const Footer = () => {
                 >
                     <BlackButton
                         text="Contact Us"
+                        link='mzaccglobal@gmail.com'
                     />
                 </motion.div>
                 <div className="footer__grid">

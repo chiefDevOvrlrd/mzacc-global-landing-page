@@ -198,6 +198,7 @@ export default function HorizontalScroll() {
                 >
                     <GreenButton
                         text="Join Us"
+                        link='mzaccglobal@gmail.com'
                     />
                 </motion.div>
             </div>

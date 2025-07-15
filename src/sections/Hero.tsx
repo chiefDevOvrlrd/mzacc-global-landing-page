@@ -79,7 +79,7 @@ export const Hero = () => {
                             transition={{duration: 0.5, delay: 1.7}}
                             className="hero__buttons"
                         >
-                            <GreenButton text="Contact Us"/>
+                            <GreenButton link="mzaccglobal@gmail.com" text="Contact Us"/>
                         </motion.div>
                         <div className="hero__imgs">
                             <div className="img__container">
