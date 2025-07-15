@@ -1,0 +1,84 @@
+@use "../abstracts/variable";
+
+.investor-container {
+    padding: 2rem;
+    color: #f2f2f2;
+    background: #021526;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid b8b3b3;
+        padding-bottom: 0.5rem;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        font-size: 0.95rem;
+
+        .header {
+        display: contents;
+        font-weight: bold;
+
+        div {
+            padding: 0.75rem;
+            border-bottom: 2px solid #e8dbdb;
+        }
+        }
+
+        .row {
+        display: contents;
+
+        div {
+            padding: 0.6rem 0.75rem;
+            border-bottom: 1px solid #c1bdbd;
+        }
+
+        &:nth-child(even) {
+            background: #181818;
+        }
+        }
+    }
+
+    // Tablet view (2-column grid)
+    @media (max-width: variable.$breakpoint-tablet) {
+        .grid {
+        grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    // Mobile view (card stack)
+    @media (max-width: variable.$breakpoint-mobile) {
+        .grid {
+        display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .header {
+        display: none;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 1fr;
+        background: #1a1a1a;
+        padding: 1rem;
+        border-radius: 8px;
+
+        div {
+          padding: 0.4rem 0;
+          border: none;
+
+          &::before {
+            content: attr(data-label) ": ";
+            font-weight: bold;
+            color: #999;
+          }
+        }
+      }
+    }
+  }
+}
