@@ -11,6 +11,7 @@ import Biznova from '../../assets/Biznova.png';
 import Ainova from '../../assets/Ainova.png';
 import Greenova from '../../assets/Greenova.png';
 import Finova from '../../assets/Finova.png';
+import Enernova from '../../assets/Enernova.png'
 import "../../styles/components/_horizontalScroll.scss";
 import { GreenButton } from './Buttons';
 
@@ -69,7 +70,7 @@ export default function HorizontalScroll() {
                         <img className="img__container-img" src={mavision} alt="Mavision" />
                     </div>
                     <div className='container__text'>
-                        <h1 className="text">MAVISION <span className='text__span'> — Empowering the Future Through Knowledge</span></h1>
+                        <h1 className="text">MAVIZION <span className='text__span'> — Empowering the Future Through Knowledge</span></h1>
                         <p>Mavizion is our learning powerhouse — training the next generation in AI, cybersecurity, UI/UX, digital business, and tech. Through real-world certifications, bootcamps, and mentorship, we’re building elite African talent with global readiness.</p>
                     </div>
                 </div>
@@ -156,11 +157,11 @@ export default function HorizontalScroll() {
                     </div>
                     <div className="sub-company">                        
                         <div className="img__container">
-                            <img src={Formora} alt="Formora" />
+                            <img src={Enernova} alt="Enernova" />
                         </div>
                         <div className="sub-company__text">
-                            <h1 className="text">Formora <span className='text__span'> — Where Design Meets Experience</span></h1>
-                            <p>Formora creates magnetic experiences through world-class UI/UX, branding, animation, and digital storytelling. We design visuals that convert and captivate.</p>
+                            <h1 className="text">Enernova <span className='text__span'> — The Future of OilTech</span></h1>
+                            <p>Enernova revolutionizes oil operations with digital monitoring, automation, and smart energy analytics — improving yield, safety, and sustainability.</p>
                         </div>
                     </div>
                 </div>

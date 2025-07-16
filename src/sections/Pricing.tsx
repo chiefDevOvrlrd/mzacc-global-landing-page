@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { useBackground } from "../context/BackgroundContext";
 import { motion, useInView } from 'motion/react';
 import InvestorTiers from "../components/InvestorTable";
-// import { PriceCard } from "../components/ui/PriceCard";
+import InvestmentImg from "../assets/investment-plan.png"
 import PricingTable from "../components/PricingTable";
 import "../styles/layout/_pricing.scss"
 const containerVariants = {
@@ -23,7 +23,7 @@ const headingVariants = {
         opacity: 1,
         scale: 1,
         transition: {
-            duration: 0.,
+            duration: 0.4,
             delay: 0.2 + i * 0.2,
             ease: [0.42, 0, 0.58, 1] as const,
         },
@@ -73,12 +73,14 @@ export const Pricing = () =>{
     const extraRef = useRef<HTMLUListElement>(null);
     const investmentRef = useRef<HTMLDivElement>(null);
     const benefitRef = useRef<HTMLUListElement>(null);
+    const investmentImgRef = useRef<HTMLDivElement>(null);
 
 
-    const isInView = useInView(ref, { amount: 0.2 });
+    const isInView = useInView(ref, { amount: 0.1 });
     const extraInView = useInView(extraRef, { amount: 0.2 });
     const investmentInView = useInView(investmentRef, { amount: 0.3 });
     const benefitInView = useInView(benefitRef);
+    const imgInView = useInView(investmentImgRef, {amount: 0.3});
 
     useEffect(() => {
         setBackground(isInView ? "#F2F2F2" : "#021526");
@@ -218,6 +220,15 @@ export const Pricing = () =>{
                     </motion.li>
                 </ul>
             </motion.section>
+            <motion.div
+                ref={investmentImgRef}
+                className="investment__image"
+                variants={headingVariants} custom={1}
+                animate={imgInView ? "visible" : "hidden"}
+                initial="hidden"
+            >
+                <img src={InvestmentImg} alt="" />
+            </motion.div>
         </div>
     )
     
