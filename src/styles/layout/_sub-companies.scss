@@ -1,3 +1,5 @@
+@use'../abstracts/variable';
+
 .sub-companies{
     overflow-x: hidden;
     position: relative;
@@ -58,6 +60,23 @@
                         object-fit: contain;
                         border-radius: 16px;
                     }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: variable.$breakpoint-tablet) {
+    .sub-companies{
+
+        .partnership-grid__container{
+            padding: 150px 20px;
+            .partnership-grid{
+                flex-wrap: wrap;
+                justify-content: center;
+                .partner{
+                    width: 200px;
                 }
             }
         }

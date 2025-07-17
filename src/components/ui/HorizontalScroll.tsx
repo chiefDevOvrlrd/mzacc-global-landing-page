@@ -11,6 +11,7 @@ import Biznova from '../../assets/Biznova.png';
 import Ainova from '../../assets/Ainova.png';
 import Greenova from '../../assets/Greenova.png';
 import Finova from '../../assets/Finova.png';
+import Trusteon from "../../assets/Trusteon.png"
 import Enernova from '../../assets/Enernova.png'
 import "../../styles/components/_horizontalScroll.scss";
 import { GreenButton } from './Buttons';
@@ -76,11 +77,11 @@ export default function HorizontalScroll() {
                 </div>
                 <div className="sub-company">
                     <div className='img__container'>
-                        <img className="img__container-img" src={mavision} alt="Mavision" />
+                        <img className="img__container-img" src={Trusteon} alt="Trusteon" />
                     </div>
                     <div className='container__text'>
-                        <h1 className="text">MAVISION <span className='text__span'> — Empowering the Future Through Knowledge</span></h1>
-                        <p>Mavizion is our learning powerhouse — training the next generation in AI, cybersecurity, UI/UX, digital business, and tech. Through real-world certifications, bootcamps, and mentorship, we’re building elite African talent with global readiness.</p>
+                        <h1 className="text">Trusteon <span className='text__span'> — Securing Digital Lives & Transactions</span></h1>
+                        <p>With solutions like TrustTransact, Trusteon safeguards people and systems against scams, breaches, and impersonation. From secure platforms to global threat intelligence, we’re the fortress for digital trust.</p>
                     </div>
                 </div>
             </div>
