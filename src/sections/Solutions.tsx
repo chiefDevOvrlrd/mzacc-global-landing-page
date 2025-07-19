@@ -49,7 +49,7 @@ const carouselVariants = {
 export const Solution = () => {
     const { setBackground } = useBackground();
     const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, { amount: 0.2 });
+    const isInView = useInView(ref, { amount: "some" });
 
     useEffect(() => {
         setBackground(isInView ? "#F2F2F2" : "#021526");

@@ -131,51 +131,55 @@ const PricingTable: React.FC = () => {
 return (
     <div className="pricing-container">
         <section className="tier-pricing">
-            <h2>Service Pricing Tiers (All Currencies)</h2>
-            <div className="grid">
-            <div className="header">
-                <div>Tier</div>
-                <div>Who it’s for</div>
-                <div>USD</div>
-                <div>GBP</div>
-                <div>EUR</div>
-                <div>NGN</div>
-            </div>
-            {tiers.map((tier) => (
-                <div className="row" key={tier.tier}>
-                <div>{tier.tier}</div>
-                <div>{tier.who}</div>
-                <div>{tier.USD}</div>
-                <div>{tier.GBP}</div>
-                <div>{tier.EUR}</div>
-                <div>{tier.NGN}</div>
+            <div className="scroll-wrapper">
+              <h2>Service Pricing Tiers (All Currencies)</h2>
+              <div className="grid">
+                <div className="header">
+                    <div>Tier</div>
+                    <div>Who it’s for</div>
+                    <div>USD</div>
+                    <div>GBP</div>
+                    <div>EUR</div>
+                    <div>NGN</div>
                 </div>
-            ))}
+                {tiers.map((tier) => (
+                    <div className="row" key={tier.tier}>
+                    <div>{tier.tier}</div>
+                    <div>{tier.who}</div>
+                    <div>{tier.USD}</div>
+                    <div>{tier.GBP}</div>
+                    <div>{tier.EUR}</div>
+                    <div>{tier.NGN}</div>
+                    </div>
+                ))}
+              </div>
             </div>
         </section>
 
         <section className="subcompany-services">
+          <div className="scroll-wrapper">
             <h2>Services by Subcompany</h2>
             <div className="grid">
-            <div className="header">
-                <div>Subcompany</div>
-                <div>Example Services</div>
-                <div>USD</div>
-                <div>GBP</div>
-                <div>EUR</div>
-                <div>NGN</div>
+              <div className="header">
+                  <div>Subcompany</div>
+                  <div>Example Services</div>
+                  <div>USD</div>
+                  <div>GBP</div>
+                  <div>EUR</div>
+                  <div>NGN</div>
+              </div>
+              {subcompanies.map((company) => (
+                  <div className="row" key={company.name}>
+                  <div>{company.name}</div>
+                  <div>{company.services}</div>
+                  <div>{company.USD}</div>
+                  <div>{company.GBP}</div>
+                  <div>{company.EUR}</div>
+                  <div>{company.NGN}</div>
+                  </div>
+              ))}
             </div>
-            {subcompanies.map((company) => (
-                <div className="row" key={company.name}>
-                <div>{company.name}</div>
-                <div>{company.services}</div>
-                <div>{company.USD}</div>
-                <div>{company.GBP}</div>
-                <div>{company.EUR}</div>
-                <div>{company.NGN}</div>
-                </div>
-            ))}
-            </div>
+          </div>
         </section>
     </div>
   );

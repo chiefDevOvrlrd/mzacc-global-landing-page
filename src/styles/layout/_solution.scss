@@ -115,3 +115,13 @@
         }
     }
 }
+
+@media (max-width: variable.$breakpoint-mobile) {
+    .solution__container{
+        .solution__text{
+            h1{
+                font-size: .7rem;
+            }
+        }
+    }
+}

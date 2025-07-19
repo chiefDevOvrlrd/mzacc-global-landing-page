@@ -59,6 +59,28 @@
     text-align: center;
     color: #181818;
 }
+
+.scroll-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 1rem;
+
+    // Match grid width to minimum needed to avoid squashing
+    .grid {
+        min-width: 700px;
+    }
+
+    @media (max-width: variable.$breakpoint-mobile) {
+        &::after {
+            content: "← Scroll →";
+            display: block;
+            font-size: 0.75rem;
+            text-align: right;
+            color: #888;
+            padding-top: 0.25rem;
+        }
+    }
+}
 @media (max-width: variable.$breakpoint-tablet) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
@@ -77,6 +99,13 @@
 }
 
 @media (max-width: variable.$breakpoint-mobile) {
+    .pricing-container{
+        padding: 0;
+        .tier-pricing,
+        .subcompany-services{
+            width: 50%;
+        }
+    }
     .grid {
         display: flex;
         flex-direction: column;

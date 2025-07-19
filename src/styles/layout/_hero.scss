@@ -95,17 +95,22 @@
 
 @media (max-width: variable.$breakpoint-mobile) {
   .hero__container {
-    padding: 30px 2vw;
-    .hero__text h1 {
-      font-size: 1.3rem;
+    padding: 100px 20px;
+    .hero__text {
+
+      h1 {
+        font-size: 1.3rem;
+        padding: 0;
+        span{
+          font-size: 2rem;
+        }
+      }
     }
-    .hero__imgs .img1, .hero__imgs .img2, .hero__imgs .img3 {
-      width: 98vw;
-      max-width: 98vw;
-      height: 100px;
+    .img1, .img3{
+      display: none;
     }
   }
   .hero__text p {
-    font-size: 0.9rem;
+    font-size: .9rem;
   }
 }

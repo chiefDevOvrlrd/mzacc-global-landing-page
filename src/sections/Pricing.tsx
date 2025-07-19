@@ -76,19 +76,16 @@ export const Pricing = () =>{
     const investmentImgRef = useRef<HTMLDivElement>(null);
 
 
-    const isInView = useInView(ref, { amount: 0.1 });
-    const extraInView = useInView(extraRef, { amount: 0.2 });
-    const investmentInView = useInView(investmentRef, { amount: 0.3 });
+    const isInView = useInView(ref, { amount: "some" });
+    const extraInView = useInView(extraRef, { amount: "some" });
+    const investmentInView = useInView(investmentRef, { amount: "some" });
     const benefitInView = useInView(benefitRef);
-    const imgInView = useInView(investmentImgRef, {amount: 0.3});
+    const imgInView = useInView(investmentImgRef, {amount: "some"});
 
     useEffect(() => {
         setBackground(isInView ? "#F2F2F2" : "#021526");
     }, [isInView, setBackground]);
 
-    useEffect(() => {
-    console.log("extraInView:", benefitInView);
-    }, [benefitInView]);
     return(
         <div className="pricing-investment__section"
             ref={ref}

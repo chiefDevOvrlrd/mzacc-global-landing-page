@@ -6,6 +6,7 @@ import { IconMail } from '@tabler/icons-react';
 import { IconMapPin } from '@tabler/icons-react';
 import { IconBrandDiscord } from '@tabler/icons-react';
 import { IconBrandLinkedin } from '@tabler/icons-react';
+import { IconBrandYoutube } from '@tabler/icons-react';
 import { IconBrandWhatsapp } from '@tabler/icons-react';
 import { BlackButton } from '../components/ui/Buttons';
 import mzaccLogo from '../assets/mzacc-blue-logo.ico'
@@ -192,6 +193,9 @@ const Footer = () => {
                     </a>
                     <a href="https://discord.gg/TcuZ5nbd">
                         <IconBrandDiscord stroke={1.25} />
+                    </a>
+                    <a href="https://youtube.com/@mzaccglobal?si=YL0JNP8HbuMmJrOW ">
+                        <IconBrandYoutube stroke={1.25} />
                     </a>
                 </motion.div>
             </div>

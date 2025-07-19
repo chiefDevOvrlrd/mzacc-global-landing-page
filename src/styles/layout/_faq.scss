@@ -83,3 +83,22 @@
         }
     }
 }
+
+@media (max-width: variable.$breakpoint-mobile) {
+    .faq{
+        padding: 80px 10px;
+        &__container{
+            .faq__header{
+                font-size: 2rem;
+                line-height: 2rem;
+            }
+            .faq__list{
+                padding: 10px 0;
+                font-size: .9rem;
+            }
+            .need__more__help{
+                padding: 60px 10px;
+            }
+        }
+    }
+}

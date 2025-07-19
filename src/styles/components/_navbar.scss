@@ -105,3 +105,91 @@
         padding: 20px 60px;
     }
 }
+
+@media (max-width: variable.$breakpoint-mobile) {
+    // .navbar{
+    //     padding: 10px 20px;
+    //     &__container{
+    //         display: block;
+    //         align-items: stretch;
+    //         gap: 1rem;
+    //         .navbar__logo{
+    //             transition: opacity 0.3s ease;
+    //             &.hide-logo{
+    //                 opacity: 0;
+    //                 visibility: hidden;
+    //             }
+    //         }
+    //         .navbar__sidebar{
+    //             display: flex;
+    //             flex-direction: column;
+    //             align-items: flex-start;
+    //             padding: 10px;
+    //             max-height: 50px;
+    //             transition: max-height 0.3s ease;
+    //             overflow: hidden;
+    //             &.expanded{
+    //                 max-height: fit-content;
+    //                 height: fit-content;
+    //             }
+    //             .navbar__toggle{
+    //                 align-self: flex-end;
+    //                 margin-bottom: .5rem;
+    //             }
+    //             .navbar__links {
+    //                 flex-direction: column;
+    //                 ul {
+    //                     flex-direction: column;
+    //                     align-items: flex-end;
+    //                     gap: 1rem;
+    //                     padding: 20px;
+    //                 }
+    //             }
+    //         }
+    //         .expanded{
+    //             max-width: 100%;
+    //             opacity: 1;
+    //             // background: rgba(255, 255, 255, 0.1);
+    //             padding: 1rem;
+    //             border-radius: 12px;
+    //         }
+    //         // .navbar__container{
+
+    //         // }
+    //     }
+    // }
+    .navbar{
+        height: fit-content;
+        padding: 10px 20px;
+        &__container{
+            .navbar__logo{
+                transition: opacity 0.3s ease;
+                &.hide-logo{
+                    transition: opacity 0.3s ease;
+                    opacity: 0;
+                    visibility: hidden;
+                    width: 0;
+                }
+            }
+            .navbar__sidebar{
+                flex-direction: column;
+                border-radius: 35px;
+                align-items: flex-end;
+                transition: max-height 0.3s ease;
+                .navbar__links{
+                    ul{
+                        flex-direction: column;
+                    }
+                }
+
+                &.expanded{
+            
+                    max-width: 100%;
+                    max-height: fit-content;
+
+                }
+            }
+        }
+    }
+
+}

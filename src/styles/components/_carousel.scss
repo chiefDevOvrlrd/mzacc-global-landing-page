@@ -1,3 +1,5 @@
+@use "../abstracts/variable";
+
 .carousel {
   position: relative;
   width: 80vmin;
@@ -244,3 +246,17 @@
   padding: 6rem;
 }
 
+@media (max-width: variable.$breakpoint-mobile) {
+  .slide{
+    &__image{
+      .statement{
+        h2{
+          font-size: 1rem;
+        }
+        p{
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+}

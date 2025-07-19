@@ -62,7 +62,7 @@ body {
                 font-family: 'inter', sans-serif;
                 font-size: 1rem;
                 font-weight: 200;
-                padding-top: 50px;
+                padding-top: 20px;
             }
         }
     }
@@ -188,5 +188,30 @@ body {
         height: fit-content;
         gap: 1.5rem;
         justify-content: center;
+    }
+}
+
+@media (max-width: variable.$breakpoint-mobile) {
+    .sub-company{
+        grid-template-columns: 1fr;
+    }
+    .firstContainer{
+        gap: 4rem;
+        padding-bottom: 4rem;
+        .sub-company{
+            grid-template-columns: 1fr;
+        }
+    }
+    .panel{
+        gap: 4rem;
+    }
+    .lastContainer{
+        h3{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1rem;
+            padding: 20px;
+        }
     }
 }

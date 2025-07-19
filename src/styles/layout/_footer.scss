@@ -126,3 +126,22 @@
         }
     }
 }
+
+@media (max-width: variable.$breakpoint-mobile) {
+    .footer{
+        &__container{
+            padding:40px 10px;
+        }
+        &__grid{
+            grid-template-columns: 1fr;
+            &__details{
+                gap: 2rem;
+            }
+        }
+        .last{
+            flex-direction: column;
+            padding: 20px 10px;
+            gap: 3rem;
+        }
+    }
+}

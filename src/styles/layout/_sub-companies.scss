@@ -82,3 +82,29 @@
         }
     }
 }
+
+@media (max-width: variable.$breakpoint-mobile) {
+    .sub-companies{
+        padding: 90px 0;
+        &__content{
+            padding: 20px;
+            &-heading{
+                font-size: .7rem;
+            }
+            &-text{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1rem;
+                padding: 0;
+            }
+        }
+        .partnership-grid__container{
+            .partnership-grid{
+                .partner{
+                    width: 150px;
+                }
+            }
+        }
+    }
+}

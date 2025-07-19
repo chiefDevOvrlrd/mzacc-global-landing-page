@@ -11,11 +11,11 @@ export const NavBar = () => {
         <>
         <div className="navbar">
             <div className="navbar__container">
-                <div className="navbar__logo">
+                <div className={`navbar__logo ${isOpen ? "hide-logo" : ""}`}>
                     <img src={logo} alt="mzacc-global-logo" />
                     <p><span className="bigger__blue">MZACC</span><span className="smaller__ash">GLOBAL</span></p>
                 </div>
-                <div className="navbar__sidebar">
+                <div className={`navbar__sidebar ${isOpen ? "expanded" : ""}`}>
                     <motion.button
                         className={`navbar__toggle ${isOpen ? "open" : ""}`}
                         onClick={() => setIsOpen(!isOpen)}

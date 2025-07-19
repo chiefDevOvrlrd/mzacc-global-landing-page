@@ -154,7 +154,7 @@ const answerVariants = {
 export const Faq = () => {
     const { setBackground } = useBackground();
     const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, {amount: 0.3});
+    const isInView = useInView(ref, {amount: "some"});
     const [faqs, setFaqs] = useState<FAQItem[]>(faqList);
 
     const toggleFAQ = (id: string) => {
