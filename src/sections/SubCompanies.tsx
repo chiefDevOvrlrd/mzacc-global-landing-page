@@ -116,22 +116,22 @@ export const SubCompanies = () => {
                         </div>
                         <div className="partner">
                             <div className="img__container">
-                                <img src={gonomad} alt="Formora" />
+                                <img src={gonomad} alt="gonomad" />
                             </div>
                         </div>
                         <div className="partner">
                             <div className="img__container">
-                                <img src={exness} alt="Formora" />
+                                <a href="https://one.exness.link/a/c_uog2y3qnsc"><img src={exness} alt="exness" /></a>
                             </div>
                         </div>
                         <div className="partner">
                             <div className="img__container">
-                                <img src={inveslo} alt="Formora" />
+                                <a href="https://www.inveslo.com/register?referral=1615"><img src={inveslo} alt="inveslo" /></a>
                             </div>
                         </div>
                         <div className="partner">
                             <div className="img__container">
-                                <img src={oneroyal} alt="Formora" />
+                                <a href="https://vc.cabinet.oneroyal.com/links/go/10675"><img src={oneroyal} alt="oneroyale" /></a>
                             </div>
                         </div>
                     </motion.div>

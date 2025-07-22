@@ -177,7 +177,7 @@ const Footer = () => {
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                 >
-                    © {currentYear} MZACC Global. All rights reserved.
+                    © {currentYear} MZACC GLOBAL. All rights reserved.
                 </motion.div>
                 <motion.div
                     className="last__socials"
